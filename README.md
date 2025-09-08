@@ -1,7 +1,6 @@
 # Burning Coverage: How Wildfires Reshape Home Insurance in California
 
 **Authors:** Joseph Le, Ganesh Venu, Mason Mckhann  
-**Course:** DataSci 112 (Spring 2025)  
 
 ---
 
@@ -31,11 +30,8 @@ How do spikes in wildfire activity drive shifts in insurance markets across Cali
   - Voluntary renewal rate trends  
   - County-level case studies and heatmaps  
 
-- **`aggregated_fires_insurance_dataset.csv`** *(generated)*  
-  Unified dataset with wildfire and insurance metrics, used in analysis.
-
 - **`figures/`**  
-  Contains exported visuals (A–F) used in the results section.
+  Contains exported visuals (A–E) used in the results section.
 
 ---
 
@@ -64,39 +60,47 @@ How do spikes in wildfire activity drive shifts in insurance markets across Cali
 ## Results
 
 ### A. Lagged Wildfire Effect → Non-Renewals  
-Spikes in wildfire activity are followed by **sharp increases in non-renewals** the next year.  
-Example: 2018 fires → 2019–2020 non-renewal surge.  
-![Lagged Effect](figures/A_lagged_effect.png)
+Spikes in wildfire activity (e.g., 2018) are followed by **sharp increases in non-renewals** the next year (e.g., 2019–2020).  
+This suggests insurers react **after catastrophic events** by dropping coverage rather than proactively pricing risk.  
+![Lagged Effect](figures/FigA.png)
 
 ---
 
 ### B. Correlation Supports Time-Lag Theory  
-Correlation analysis (r ≈ **0.68**) confirms a strong link between acres burned and next-year non-renewals.  
-![Correlation Matrix](figures/B_correlation.png)
+Correlation analysis (r ≈ **0.68**) confirms a strong link between acres burned and next-year non-renewals, reinforcing the reactive behavior identified in (A).  
+![Correlation Matrix](figures/FigB.png)
 
 ---
 
 ### C. Rising Dependence on FAIR Plan  
-FAIR share of policies climbs year-over-year in the **10 most fire-exposed counties**.  
-![FAIR Plan Growth](figures/C_fair_plan_growth.png)
+In the 10 most fire-exposed counties (acres ÷ population), **FAIR Plan enrollment rises year-over-year**.  
+A darkening heatmap shows growing reliance on this “last resort” plan as private carriers exit high-risk zones.  
+![FAIR Plan Growth](figures/FigC.png)
 
 ---
 
 ### D. Declining Voluntary Renewals  
-Voluntary renewal % has **fallen steadily since 2016**. Sharp declines follow major fire seasons (Camp, Tubbs, Dixie), with no recovery.  
-![Voluntary Renewal Decline](figures/D_voluntary_renewals.png)
+Voluntary renewal % has **fallen steadily from 2016–2023**.  
+Sharpest declines occur after catastrophic fires (Camp, Tubbs, Dixie), with **no recovery** afterward.  
+![Voluntary Renewal Decline](figures/FigD.png)
 
 ---
 
-### E. Structural Shift in High-Risk Counties  
-In counties >300k population with high fire exposure, **FAIR + DIC policy counts** rose sharply post-2019.  
-![High-Risk County Shift](figures/E_highrisk_shift.png)
+### E. Structural Shift Toward Non-Voluntary Coverage  
+In the top 5 fire-dense counties (>300k population), **FAIR + DIC policy counts rose significantly post-2019**.  
+This reflects a structural shift away from voluntary markets, signaling that private insurance is no longer reliable in high-risk zones.  
+![High-Risk County Shift](figures/FigE.png)
 
 ---
 
-### F. Alameda County Case Study  
-FAIR + DIC policies tripled from 2020 to 2023 after a local wildfire, showing how even urban-adjacent counties face insurer withdrawal.  
-![Alameda County Case Study](figures/F_alameda_case.png)
+## Synthesis of Findings
+
+Together, A–E reveal a consistent pattern:  
+- **Wildfire severity and non-renewals are strongly correlated**, with lag effects confirming reactive insurer behavior.  
+- **FAIR Plan and DIC dependence is accelerating**, especially in fire-exposed or densely populated counties.  
+- **Voluntary renewal rates continue to erode**, leaving families dependent on more expensive, less comprehensive options.  
+
+California’s home insurance system is thus fragile and **reactive to shocks rather than resilient by design**.
 
 ---
 
@@ -117,24 +121,10 @@ Beyond California, this framework shows how **environmental shocks reshape finan
 - **Policy costs**: Data covers counts, not premiums; affordability effects need further study.  
 - **Regulatory responses**: Moratoriums and policy interventions were not explicitly modeled.  
 
-Future research could apply **panel regressions, event studies, or predictive models** using broader environmental and socioeconomic risk factors.
-
----
-
-## Getting Started
-
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/<your-username>/<repo-name>.git
-   cd <repo-name>
-   ```
-2. Install dependencies:  
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run notebooks in order:  
-   1. `Wildfire_Data_Collection.ipynb`  
-   2. `Wildfire_Analysis.ipynb`
+Future research could explore:  
+- Predictive modeling with **environmental and socioeconomic risk factors**  
+- **Event-study designs** to capture dynamic effects around major wildfire years  
+- Policy interventions to mitigate inequities in access and affordability for low-income homeowners  
 
 ---
 
@@ -142,6 +132,5 @@ Future research could apply **panel regressions, event studies, or predictive mo
 
 - [fire.ca.gov](https://www.fire.ca.gov/) – wildfire incident data  
 - [insurance.ca.gov](https://www.insurance.ca.gov/) – insurance policy reports  
-- Stanford DataSci 112 faculty and peers  
 
 ---
