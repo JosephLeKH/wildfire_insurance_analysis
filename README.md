@@ -1,6 +1,6 @@
 # Burning Coverage: How Wildfires Reshape Home Insurance in California
 
-**Authors:** Joseph Le, Ganesh Venu, Mason Mckhann  
+**Authors:** Joseph Le
 
 ---
 
